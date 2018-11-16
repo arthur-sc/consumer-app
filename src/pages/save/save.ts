@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FirebaseServiceProvider } from '../../providers/firebase-service/firebase-service';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SavePage page.
@@ -32,6 +33,7 @@ export class SavePage {
   save(course)
   {
     this.dbService.save(course);
+    this.navCtrl.push(HomePage);
   }
 
 }
