@@ -11,12 +11,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
+import { SavePage } from '../pages/save/save';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    SavePage
   ],
   imports: [
     BrowserModule,
@@ -28,13 +31,15 @@ import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-
       projectId: "estudo-ionic-22f6b",
       storageBucket: "estudo-ionic-22f6b.appspot.com",
       messagingSenderId: "491596375426"
-    })
+    }),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    SavePage
   ],
   providers: [
     StatusBar,
