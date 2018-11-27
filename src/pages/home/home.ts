@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SavePage } from '../save/save';
 import { FirebaseServiceProvider } from '../../providers/firebase-service/firebase-service';
+import { EditPage } from '../edit/edit';
 
 @Component({
   selector: 'page-home',
@@ -19,6 +20,11 @@ export class HomePage {
   add()
   {
     this.navCtrl.push(SavePage);
+  }
+
+  editData(data: any)
+  {
+    this.navCtrl.push(EditPage, {data: data});
   }
 
 }

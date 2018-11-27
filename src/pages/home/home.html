@@ -20,7 +20,7 @@
 
     <ion-item *ngFor="let c of courses|async">
       {{c.title}}
-      <button ion-button outline icon-only item-end>
+      <button ion-button outline icon-only item-end (click)="editData(c)">
         <ion-icon name="ios-open-outline"></ion-icon>
       </button>
     </ion-item>

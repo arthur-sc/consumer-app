@@ -5,21 +5,23 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { SavePage } from '../pages/save/save';
+import { EditPage } from '../pages/edit/edit';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
-import { SavePage } from '../pages/save/save';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    SavePage
+    SavePage,
+    EditPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     MyApp,
     HomePage,
     ListPage,
-    SavePage
+    SavePage,
+    EditPage
   ],
   providers: [
     StatusBar,

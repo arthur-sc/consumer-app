@@ -7,12 +7,46 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>edit</ion-title>
+    <ion-title>Controle</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+    <h3>Edição e exclusão de dados</h3>
+
+  <ion-card>
+
+    <ion-card-content>
+
+        <ion-item>
+            <ion-label fixed>Title</ion-label>
+            <ion-input type="text" [(ngModel)]="course.title"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label fixed>Price</ion-label>
+            <ion-input type="text" [(ngModel)]="course.price"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label fixed>Description</ion-label>
+            <ion-input type="text" [(ngModel)]="course.description"></ion-input>
+          </ion-item>
+
+    </ion-card-content>
+
+    <ion-item>
+
+      <button ion-button icon-only clear color="danger" item-start (click)="deleteData()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <button ion-button clear item-end>Editar</button>
+
+    </ion-item>
+
+  </ion-card>
 
 </ion-content>
