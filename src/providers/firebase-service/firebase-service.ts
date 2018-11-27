@@ -36,4 +36,14 @@ export class FirebaseServiceProvider {
       .then(r => console.log(r));
   }
 
+  update(course: any)
+  {
+    this.db.list('courses').update(course.key, course).then(r => console.log(r));
+  }
+
+  delete(course: any)
+  {
+    this.db.list('courses').remove(course.key).then(r => console.log(r));
+  }
+
 }

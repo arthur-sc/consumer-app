@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FirebaseServiceProvider } from '../../providers/firebase-service/firebase-service';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the EditPage page.
@@ -41,7 +42,8 @@ export class EditPage {
         {
           text: 'Agree',
           handler: () => {
-            
+            //this.dbService.delete(this.course);
+            this.navCtrl.push(HomePage);
           }
         }
       ]
